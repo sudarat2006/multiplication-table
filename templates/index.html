@@ -1,90 +1,48 @@
 {% extends "base.html" %}
 
-{% block title %}หน้าหลัก - เว็บแอป Jirasak{% endblock %}
+{% block title %}Modern WebApp{% endblock %}
 
 {% block content %}
-<div class="hero-section bg-primary text-white py-5 mb-5 rounded">
-  <div class="container text-center">
-    <h1 class="display-4 fw-bold">ยินดีต้อนรับสู่เว็บแอป Jirasak</h1>
-    <p class="lead">เว็บแอปพลิเคชันที่ทันสมัย สร้างด้วย Bootstrap 5 และ Django</p>
-    <a href="#features" class="btn btn-light btn-lg">สำรวจฟีเจอร์</a>
+<div class="hero-section text-white py-5 mb-5">
+  <div class="container text-center position-relative">
+    <h1 class="display-4 fw-bold mb-3">Modern WebApp</h1>
+    <p class="lead mb-0">เลือกฟีเจอร์ที่ต้องการใช้งาน</p>
   </div>
 </div>
 
-<section id="features" class="py-5">
+<section class="py-3">
   <div class="container">
-    <h2 class="text-center mb-5">ฟีเจอร์หลัก</h2>
-    <div class="row g-4">
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-bootstrap-fill text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">Bootstrap 5</h5>
-            <p class="card-text">เฟรมเวิร์ก Bootstrap เวอร์ชันล่าสุด พร้อมคอมโพเนนต์และยูทิลิตี้ที่ทันสมัย</p>
+    <div class="row g-4 justify-content-center">
+      <div class="col-lg-5 col-md-6">
+        <div class="card h-100">
+          <div class="card-body text-center p-4">
+            <div class="icon-feature mb-4">
+              <i class="bi bi-calculator fs-1"></i>
+            </div>
+            <h4 class="mb-3">ตารางสูตรคูณ</h4>
+            <p class="text-muted mb-4">สร้างและแสดงตารางสูตรคูณของตัวเลขที่ต้องการ</p>
+            <a href="{% url 'multipli' %}" class="btn btn-primary w-100">
+              เริ่มใช้งาน <i class="bi bi-arrow-right ms-2"></i>
+            </a>
           </div>
         </div>
       </div>
       
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-phone text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">การออกแบบแบบตอบสนอง</h5>
-            <p class="card-text">ออกแบบแบบ Mobile-first ที่ใช้งานได้บนทุกอุปกรณ์</p>
-          </div>
-        </div>
-      </div>
-      
-      <div class="col-md-4">
-        <div class="card h-100 shadow-sm">
-          <div class="card-body text-center">
-            <i class="bi bi-lightning-charge-fill text-primary fs-1 mb-3"></i>
-            <h5 class="card-title">ประสิทธิภาพสูง</h5>
-            <p class="card-text">ปรับให้เหมาะสมสำหรับความเร็วและประสิทธิภาพด้วยโค้ดที่สะอาด</p>
+      <div class="col-lg-5 col-md-6">
+        <div class="card h-100">
+          <div class="card-body text-center p-4">
+            <div class="icon-feature mb-4">
+              <i class="bi bi-arrow-repeat fs-1"></i>
+            </div>
+            <h4 class="mb-3">การวนซ้ำ</h4>
+            <p class="text-muted mb-4">ทดสอบการทำงานของลูปและการวนซ้ำข้อมูล</p>
+            <a href="{% url 'for' %}" class="btn btn-primary w-100">
+              เริ่มใช้งาน <i class="bi bi-arrow-right ms-2"></i>
+            </a>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
-
-<section class="py-5 bg-light">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-md-6">
-        <h3>เกี่ยวกับโปรเจกต์นี้</h3>
-        <p class="lead">นี่คือการจัดแสดงเว็บแอปพลิเคชันที่ทันสมัย สร้างด้วย Bootstrap 5 และเฟรมเวิร์ก Django</p>
-        <p>ฟีเจอร์ต่างๆ ได้แก่ การนำทางแบบตอบสนอง การออกแบบที่สะอาด และคอมโพเนนต์ UI ที่ทันสมัย เหมาะสำหรับเป็นจุดเริ่มต้นสำหรับโปรเจกต์เว็บถัดไปของคุณ</p>
-        <a href="/about/" class="btn btn-primary">เรียนรู้เพิ่มเติม</a>
-      </div>
-      <div class="col-md-6">
-        <div class="bg-primary text-white p-4 rounded">
-          <h4>สถิติด่วน</h4>
-          <div class="row text-center">
-            <div class="col-4">
-              <h2>100%</h2>
-              <small>ตอบสนอง</small>
-            </div>
-            <div class="col-4">
-              <h2>5+</h2>
-              <small>คอมโพเนนต์</small>
-            </div>
-            <div class="col-4">
-              <h2>∞</h2>
-              <small>ความเป็นไปได้</small>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<section class="py-5">
-  <div class="container text-center">
-    <h3>พร้อมที่จะเริ่มต้นหรือยัง?</h3>
-    <p class="lead">ติดต่อเราเพื่อเรียนรู้เพิ่มเติมเกี่ยวกับโปรเจกต์นี้</p>
-    <a href="/contact/" class="btn btn-primary btn-lg">ติดต่อเรา</a>
   </div>
 </section>
 {% endblock content %}
